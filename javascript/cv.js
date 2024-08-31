@@ -470,14 +470,15 @@ function mobile()
 
         let bell = document.querySelector('.bell');
 
-        bell.addEventListener('click', function () {
-            $('.thongBao').toggle('active');
-        });
-    
-        $('.thongBao i').on('click', function () {
-            $('.thongBao').toggle('active');
-        });
+    bell.addEventListener('click', function () {
 
+        $('.thongBao').addClass("active");
+    });
+
+    $('.thongBao i').on('click', function () {
+
+        $('.thongBao').removeClass("active");
+    });
         $('.menuPhone').on('click', function () {
 
             $('.subMenuP').show();

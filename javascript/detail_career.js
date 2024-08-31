@@ -547,7 +547,7 @@ function desktop() {
 
 function khoiTaoTab(flag)
 {
-    $('#details').addClass('active');
+    $('#details').addClass('active1');
     let tab = document.querySelector('.tab>li');
     if(flag == false)
     {
@@ -571,11 +571,13 @@ function mobile() {
     let bell = document.querySelector('.bell');
 
     bell.addEventListener('click', function () {
-        $('.thongBao').toggle('active');
+
+        $('.thongBao').addClass("active");
     });
 
     $('.thongBao i').on('click', function () {
-        $('.thongBao').toggle('active');
+
+        $('.thongBao').removeClass("active");
     });
 
     let cnt = 1;
@@ -1166,10 +1168,10 @@ function mobile() {
 
             let show = $(x.querySelector('a')).attr('href');
 
-            $('#details').removeClass('active');
-            $('#lienhe').removeClass('active');
+            $('#details').removeClass('active1');
+            $('#lienhe').removeClass('active1');
             
-            $(show).addClass('active');
+            $(show).addClass('active1');
 
            
             

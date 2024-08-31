@@ -1069,7 +1069,7 @@ footer>div:nth-child(2)>img {
 .active
 {
     display: block!important;
-    animation: thongBaoAnimate 1s ease-in-out;
+    animation: thongBaoAnimate 0.5s ease-in-out;
 }
 
 
@@ -1080,7 +1080,7 @@ footer>div:nth-child(2)>img {
         height: 0%;
     }
     to {
-        width: 81%;
-        height: 37%;
+        width: 370px;
+        height: 230px;
     }
 }

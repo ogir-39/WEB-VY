@@ -1177,16 +1177,13 @@ function mobile()
     let bell = document.querySelector('.bell');
 
     bell.addEventListener('click', function () {
-        // $('.thongBao').off();
 
-        $('.thongBao').toggleClass("active");
-        // $('.thongBao').show();
+        $('.thongBao').addClass("active");
     });
 
     $('.thongBao i').on('click', function () {
-        // $('.thongBao').off();
 
-        $('.thongBao').toggleClass("active");
+        $('.thongBao').removeClass("active");
     });
 
     let cntFilter = 1;

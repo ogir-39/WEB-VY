@@ -19,7 +19,7 @@ body {
 }
 
 /* HIDDEN */
-.phone, .main_p, .ads_p, .gcareer{
+.phone, .main_p{
     display: none;
 }
 
