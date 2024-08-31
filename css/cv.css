@@ -416,12 +416,12 @@ header{
     background: linear-gradient(transparent,rgba(0,0,0,0.3),rgba(0, 0, 0,0.6));
     padding-bottom: 0;
     box-sizing: border-box;
-    top:100%;
+    bottom:-50%
 }
 
 .imgCV:hover .choice{
     animation: highup linear 0.2s;
-    top:75%;
+    bottom:0;
 }
 
 .choice>a>p{
@@ -759,10 +759,10 @@ footer>div:nth-child(2)>img{
 
 @keyframes highup{
     from{
-        top:100%;
+        bottom: -50%;
     }
     to{
-        top:75%;
+        bottom: 0;
     }
 }
 
@@ -890,4 +890,14 @@ footer>div:nth-child(2)>img{
 #close > button
 {
     cursor: pointer;
+}
+
+.thongBao
+{
+    display: none;
+}
+
+.active
+{
+    display: block;
 }

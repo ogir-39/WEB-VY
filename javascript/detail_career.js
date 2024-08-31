@@ -568,6 +568,16 @@ function mobile() {
 
     khoiTaoTab(co);
 
+    let bell = document.querySelector('.bell');
+
+    bell.addEventListener('click', function () {
+        $('.thongBao').toggle('active');
+    });
+
+    $('.thongBao i').on('click', function () {
+        $('.thongBao').toggle('active');
+    });
+
     let cnt = 1;
 
     // cuộn thanh tìm kiếm trên taskbar
@@ -1171,7 +1181,7 @@ window.onload = function () {
     if (window.innerWidth >= 1024) {
         desktop();
     }
-    else if(window.innerWidth <= 500) {
+    else if(window.innerWidth <= 1023) {
         mobile();
     }
 
@@ -1179,9 +1189,9 @@ window.onload = function () {
         if (window.innerWidth >= 1024) {
             desktop();
         }
-        else if(window.innerWidth <= 500) {
+        else if(window.innerWidth <= 1023) {
             mobile();
         }
     });
-
+    
 }

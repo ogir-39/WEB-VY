@@ -944,3 +944,7 @@ footer>div:nth-child(2)>img{
 .moonOff{
     animation: moonOff ease-in-out 1s;
 }
+
+.thongBao{
+    display: none;
+}

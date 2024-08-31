@@ -1158,3 +1158,9 @@ footer>div:nth-child(2)>img{
 {
     display: none;
 }
+
+.active
+{
+    display: block!important;
+    
+}

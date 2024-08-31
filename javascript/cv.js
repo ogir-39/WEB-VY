@@ -1,5 +1,6 @@
 function desktop()
 {
+    $('*').off();
     let close = document.querySelector('#close');
     close.onclick = function () {
         let pre = document.querySelectorAll('.preview');
@@ -23,6 +24,12 @@ function desktop()
         }
     })
 
+    $('#close').css({
+        'display': 'block'
+    })
+
+
+
     $('.preview').on('click', function (event) {
         event.stopImmediatePropagation();
         $(this).css({
@@ -37,7 +44,7 @@ function desktop()
             'display': 'block'
         })
         $('#close').css({
-            'display': 'none'
+            'display': 'block'
         })
     })
 
@@ -457,13 +464,41 @@ function desktop()
 
 function mobile()
 {
+        $('*').off();
+
         $('.subMenuP').hide();
+
+        let bell = document.querySelector('.bell');
+
+        bell.addEventListener('click', function () {
+            $('.thongBao').toggle('active');
+        });
+    
+        $('.thongBao i').on('click', function () {
+            $('.thongBao').toggle('active');
+        });
 
         $('.menuPhone').on('click', function () {
 
             $('.subMenuP').show();
             $('.subMenuP>li:first-child>i').on('click', function () {
                 $('.subMenuP').hide();
+            })
+        })
+        
+
+        $('#close').css({
+            'display': 'none'
+        })
+
+        $('.preview div').on('click', function (event) {
+            event.stopImmediatePropagation();
+    
+            $('.preview div div').css({
+                'display': 'block'
+            })
+            $('#close').css({
+                'display': 'none'
             })
         })
 
@@ -760,7 +795,7 @@ function mobile()
         $('#moon').click(function () {
             if (co == false) {
                 co = true;
-
+                $('.form').css('background-color', '#292a2d');
                 $('.color').css('background-color', '#292a2d');
                 $('.topcmps').css('background-color', '#292a2d');
                 $('.underline').css('background', 'white');
@@ -852,9 +887,6 @@ function mobile()
                 $('.choice').css({
                     'background': 'linear-gradient(transparent, rgba(20,42,56,0.3), rgba(28,89,129,0.6))'
                 })
-                $('.form').css({
-                    'background': ''
-                })
                 $('.design').css({
                     'background': 'rgb(49,51,56)'
                 })
@@ -931,7 +963,7 @@ window.onload = function () {
         mobile();
     }
 
-    $(window).resize(function(){
+    $(window).on('resize',function(){
         if(window.innerWidth >= 1024)
         {
             desktop();

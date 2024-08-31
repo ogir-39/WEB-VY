@@ -25,6 +25,7 @@ body {
 /* PHONE MENU */
 .phone{
     width: 100%;
+    max-height: 60px;
     justify-content: space-between;
     background-color: white;
     top: 0;
@@ -42,10 +43,11 @@ body {
 .logo{
     width: 30%;
     align-content: center;
+    max-width: 130px;
 }
 
 .logo img{
-    width: 100%;
+    height: 100%;
 }
 
 .user{
@@ -302,8 +304,12 @@ body {
     padding: 3% 1% !important;
     margin: 0;
     box-sizing: border-box;
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 0;
+}
+.lienhe
+{
+    background-color: whitesmoke;
 }
 
 .tab-content .details h3{
@@ -454,23 +460,34 @@ body {
 /* COMPANIES */
 .topcmps{
     width: 100%;
+    scrollbar-width: none;
+    z-index: 1;
+    position: relative;
+    background-color: white;
     box-sizing: border-box;
     padding: 2%;
 }
 
+.topcmps>h2{
+    padding-top: 0 !important;
+}
+
 .topcmps>div{
+    width: 100%;
     height: max-content;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow-x:scroll;
     scrollbar-width: none;
+    flex-wrap: nowrap;
 }
 
 .topcmp{
     display: block;
-    min-width: 60vw;
     box-sizing: border-box;
-    padding: 0.5rem;
+    padding: 1%;
     justify-self: center;
+    min-width: 260px;
+    max-width: 260px;
+    max-height: 286px;
 }
 
 .topcmp>div{
@@ -482,6 +499,7 @@ body {
     height: 100%;
     text-align: center;
     margin: 0;
+    align-content: center;
 }
 
 .topcmp>div>div{
@@ -498,8 +516,7 @@ body {
 }
 
 .imgcmp{
-    height: 7rem;
-    background-color: white;
+    height: 10rem;
     border-radius: 1rem;
     align-content: center;
     box-sizing: border-box;
@@ -516,6 +533,7 @@ body {
 
 .imgcmp>img{
     width: 50%;
+    border-radius: 1rem;
 }
 
 /* CHOICE */
@@ -849,4 +867,230 @@ footer>div:nth-child(2)>img{
 #details,#lienhe
 {
     display: none;
+}
+
+
+.thongBao
+{
+    position: fixed;
+    z-index: 2000;
+    width: 81%;
+    height: 37%;
+    text-align: center;
+    border-radius: 2rem;
+    background: rgba(173,216,230,0.75);
+    left: 10%;
+    top: 28%;
+}
+
+.thongBao img
+{
+    position: absolute;
+    width: 50%;
+    opacity: 0.3;
+    text-align: center;
+    left: 25%;
+    top: 20%;
+
+}
+.thongBao div
+{
+    position: absolute;
+    left: 6%;
+    font-weight: bold;
+    top: 43%;
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+
+
+}
+
+.thongBao i
+{
+    position: absolute;
+    right: 9%;
+    top: 7%;
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+
+@media (min-width: 660px) {
+.main_p .info, .main .lienhe, .main .details{
+    display: none;
+}
+
+.main{
+    display: block;
+}
+
+    /* SUBMENU */
+.subMenuP{
+    background-color: white;
+    position: fixed;
+    list-style-type: none;
+    padding: 4%;
+    padding-top: 2%;
+    box-sizing: border-box;
+    margin: 0;
+    top:0;
+    width: 70%;
+    height: 100%;
+    left: 0;
+    z-index: 999;
+    overflow: scroll;
+}
+
+.subMenuP>li{
+    padding-top: 0;
+    padding-bottom: 5%;
+}
+
+.subMenuP>li>i{
+    text-align: center;
+    width: 5%;
+    padding-right: 4%;
+    color: #5cade3;
+}
+
+.subMenuP>li:nth-child(8){
+    border-top: 1px solid gray;
+    margin-top: 0;
+    padding-top: 3%;
+   
+}
+
+.subMenuP>li>a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding-left: 0.2%;
+}
+
+.subMenuP>li:first-child{
+    padding-bottom: 0;
+}
+
+.subMenuP>li:first-child>i{
+    font-size: x-large;
+}
+
+.subMenuP>li:nth-child(2){
+    text-align: center;
+}
+
+.subMenuP>li:nth-child(2)>img{
+    width: 50%;
+    max-width: 130px;
+}
+
+.subMenuP>li:nth-child(3){
+    border: 1px solid gray;
+    border-radius: 2rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    max-height: 40px;
+    padding: 2%;
+    display: flex;
+}
+
+.subMenuP>li:nth-child(4){
+    margin-top: 6%;
+}
+
+.subMenuP > li:nth-child(6) > a
+{
+    padding: 0%;
+}
+
+.subMenuP>li:last-child{
+    padding: 0;
+}
+
+.subMenuP>li>input{
+    border-radius: 2rem;
+    border: 0;
+    padding: 0.2rem;
+    font-size: medium;
+    box-sizing: border-box;
+    padding-left: 1%;
+    outline: none;
+    width: 80%;
+    background-color: transparent;
+}
+
+.subMenuP>li>button{
+    border: 0;
+    background-color: transparent;
+}
+
+/* MAIN */
+
+.main{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    height: fit-content;
+    padding-bottom: 0;
+}
+
+.main .info{
+    margin: 0;
+}
+
+.main .info p{
+    padding-right: 0;
+}
+
+.main .info>div:first-child{
+    width: 100%;
+}
+
+.main .info>div>div:last-child>div{
+    flex-wrap: nowrap;
+}
+
+
+.thongBao {
+    position: fixed;
+    z-index: 2000;
+    width: 40%;
+    height: 55%;
+    text-align: center;
+    border-radius: 2rem;
+    background: rgba(173, 216, 230, 0.75);
+    left: 27%;
+    top: 28%;
+}
+
+.thongBao img {
+    position: absolute;
+    width: 44%;
+    opacity: 0.3;
+    text-align: center;
+    left: 25%;
+    top: 20%;
+}
+
+.thongBao div {
+    position: absolute;
+    left: 10%;
+    font-weight: bold;
+    top: 45%;
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+}
+
+/* THEME */
+.theme{
+    width: 7%;
+}
+}
+
+.active
+{
+    display: block!important;
 }

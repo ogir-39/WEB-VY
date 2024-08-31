@@ -1174,13 +1174,19 @@ function mobile()
 
     $('.word').off();
 
-    $('.bell').on('click', function () {
-        $('.thongBao').toggle('active');
-        
+    let bell = document.querySelector('.bell');
+
+    bell.addEventListener('click', function () {
+        // $('.thongBao').off();
+
+        $('.thongBao').toggleClass("active");
+        // $('.thongBao').show();
     });
 
     $('.thongBao i').on('click', function () {
-        $('.thongBao').toggle('active');
+        // $('.thongBao').off();
+
+        $('.thongBao').toggleClass("active");
     });
 
     let cntFilter = 1;

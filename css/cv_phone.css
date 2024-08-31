@@ -18,13 +18,14 @@ body {
 }
 
 /* HIDDEN */
-.head , .below, .ads, #close, .color>p{
+.head , .below, .ads, .color>p, #close{
     display: none;
 }
 
 /* PHONE MENU */
 .phone{
     width: 100%;
+    max-height: 60px;
     justify-content: space-between;
     background-color: white;
     top: 0;
@@ -42,6 +43,7 @@ body {
 .logo{
     width: 30%;
     align-content: center;
+    max-width: 130px;
 }
 
 /* .logo img{
@@ -49,7 +51,7 @@ body {
 } */
 
 .logo a img{
-    width: 100%;
+    height: 100%;
 }
 
 .user{
@@ -232,12 +234,11 @@ body {
     background: linear-gradient(transparent,rgba(0,0,0,0.5),rgba(0, 0, 0,0.7));
     padding-bottom: 0;
     box-sizing: border-box;
-    top:75%;
+    bottom: 0;
 }
 
 .imgCV:hover .choice{
     animation: none;
-    top:75%;
 }
 
 .choice button{
@@ -533,4 +534,365 @@ footer>div:nth-child(2)>img{
 
 .theme>i:last-child{
     color: gainsboro;
+}
+
+.thongBao
+{
+    position: fixed;
+    z-index: 2000;
+    width: 81%;
+    height: 37%;
+    text-align: center;
+    border-radius: 2rem;
+    background: rgba(173,216,230,0.75);
+    left: 10%;
+    top: 28%;
+}
+
+.thongBao img
+{
+    position: absolute;
+    width: 50%;
+    opacity: 0.3;
+    text-align: center;
+    left: 25%;
+    top: 20%;
+
+}
+.thongBao div
+{
+    position: absolute;
+    left: 6%;
+    font-weight: bold;
+    top: 43%;
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+
+
+}
+
+.thongBao i
+{
+    position: absolute;
+    right: 9%;
+    top: 7%;
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+@media (min-width: 660px) {
+    /* SUBMENU */
+.subMenuP{
+    background-color: white;
+    position: fixed;
+    list-style-type: none;
+    padding: 4%;
+    padding-top: 2%;
+    box-sizing: border-box;
+    margin: 0;
+    top:0;
+    width: 70%;
+    height: 100%;
+    left: 0;
+    z-index: 999;
+    overflow: scroll;
+}
+
+.subMenuP>li{
+    padding-top: 0;
+    padding-bottom: 5%;
+}
+
+.subMenuP>li>i{
+    text-align: center;
+    width: 5%;
+    padding-right: 4%;
+    color: #5cade3;
+}
+
+.subMenuP>li:nth-child(8){
+    border-top: 1px solid gray;
+    margin-top: 0;
+    padding-top: 3%;
+   
+}
+
+.subMenuP>li>a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding-left: 0.2%;
+}
+
+.subMenuP>li:first-child{
+    padding-bottom: 0;
+}
+
+.subMenuP>li:first-child>i{
+    font-size: x-large;
+}
+
+.subMenuP>li:nth-child(2){
+    text-align: center;
+}
+
+.subMenuP>li:nth-child(2)>img{
+    width: 50%;
+    max-width: 130px;
+}
+
+.subMenuP>li:nth-child(3){
+    border: 1px solid gray;
+    border-radius: 2rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    max-height: 40px;
+    padding: 2%;
+    display: flex;
+}
+
+.subMenuP>li:nth-child(4){
+    margin-top: 6%;
+}
+
+.subMenuP > li:nth-child(6) > a
+{
+    padding: 0%;
+}
+
+.subMenuP>li:last-child{
+    padding: 0;
+}
+
+.subMenuP>li>input{
+    border-radius: 2rem;
+    border: 0;
+    padding: 0.2rem;
+    font-size: medium;
+    box-sizing: border-box;
+    padding-left: 1%;
+    outline: none;
+    width: 80%;
+    background-color: transparent;
+}
+
+.subMenuP>li>button{
+    border: 0;
+    background-color: transparent;
+}
+
+/* CV */
+.CVs{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cv{
+    width: 30%;
+    box-sizing: border-box;
+    padding: 2% 0;
+}
+
+.cv a{
+    text-decoration: none;
+    color: black;
+}
+
+.cv>div{
+    width: 100%;
+    border: 1px solid #97bdd4;
+    background-color: white;
+    border-radius: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.cv .imgCV{
+    width: 100%;
+    background-color: #cbdde8;
+    border-radius: 1rem 1rem 0 0;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    position: relative;
+    margin: auto;
+}
+
+.cv .imgCV>a>img{
+    width: 100%;
+}
+
+.cv>div>a>p{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* bigImg */
+.preview{
+    position: fixed;
+    top:0;
+    margin: auto;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: none;
+}
+
+.form{
+    width: 90%;
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgb(145, 207, 227);
+    display: flex;
+}
+
+.bigImg{
+    width: 70%;
+    overflow: auto;
+    border-radius: 1rem 0 0 0;
+    height: 100%;
+}
+
+.bigImg>img{
+    width: 100%;
+    height: max-content;
+}
+
+.design{
+    width: 25%;
+    align-content: normal;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: white;
+    height: 40%;
+    margin: auto;
+    border-radius: 1rem;
+    display: block !important;
+    padding: 2%;
+}
+
+.design>p{
+    display: none;
+}
+
+.color{
+    border: 2px solid #97bdd4;
+    width: 70%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.color>p{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0.8rem;
+}
+
+.color>button{
+    height: 1.5rem;
+    position: relative;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+.btnColor>i{
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10%;
+    right: 17%;
+    display: none;
+}
+
+/* #w{
+    display: block !important;
+} */
+
+.buttons{
+    width: 100%;
+    display: flex !important;
+}
+
+.buttons button{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.buttons>div{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.8rem;
+    margin: 0;
+    cursor: pointer;
+}
+
+.buttons>div:first-child{
+    background-color: #00b14f;
+    margin-top: 8%;
+}
+
+.buttons>div:first-child a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.buttons>div:last-child{
+    border: 1px solid gray;
+}
+
+/*THÊMW*/
+.theme{
+    width: 7%;
+}
+.thongBao {
+    position: fixed;
+    z-index: 2000;
+    width: 40%;
+    height: 55%;
+    text-align: center;
+    border-radius: 2rem;
+    background: rgba(173, 216, 230, 0.75);
+    left: 27%;
+    top: 28%;
+}
+
+.thongBao img {
+    position: absolute;
+    width: 44%;
+    opacity: 0.3;
+    text-align: center;
+    left: 25%;
+    top: 20%;
+}
+
+.thongBao div {
+    position: absolute;
+    left: 10%;
+    font-weight: bold;
+    top: 45%;
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+}
+.theme {
+    width: 7%;
+}
+
 }
