@@ -272,7 +272,7 @@ function desktop()
                 'background': 'linear-gradient(transparent, rgba(20,42,56,0.3), rgba(28,89,129,0.6))'
             })
             $('.form').css({
-                'background': '#292a2d'
+                'background': 'transparent'
             })
             $('.design').css({
                 'background': 'rgb(49,51,56)'
@@ -796,7 +796,7 @@ function mobile()
         $('#moon').click(function () {
             if (co == false) {
                 co = true;
-                $('.form').css('background-color', '#292a2d');
+                $('.form').css('background-color', 'transparent');
                 $('.color').css('background-color', '#292a2d');
                 $('.topcmps').css('background-color', '#292a2d');
                 $('.underline').css('background', 'white');
