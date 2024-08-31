@@ -498,7 +498,7 @@ header{
     text-align: center;
     margin-top: 2rem;
     background-color: white;
-    height: 40%;
+    height: fit-content;
     margin: auto;
     border-radius: 1rem;
 }
