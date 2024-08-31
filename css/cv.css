@@ -13,7 +13,7 @@ body {
     
 }
 /*HIDDEN*/
-.phone, .preview>p{
+.phone, .preview>p, .ads_p, .gcareer{
     display: none;
 }
 
