@@ -675,6 +675,14 @@ function mobile()
             if (co == true) {
                 co = false;
 
+                $('.form').css('background-color', '');
+
+                if(window.innerWidth>500) $('.form').css('background-color', '');
+                $(window).resize(function(){
+                    if(window.innerWidth>500) $('.form').css('background-color', '');
+                    else $('.form').css('background-color', '');
+                });
+
                 $('.color').css('background-color', '');
                 $('.topcmps').css('background-color', '');
                 $('.underline').css('background', '');
@@ -796,7 +804,13 @@ function mobile()
         $('#moon').click(function () {
             if (co == false) {
                 co = true;
-                $('.form').css('background-color', 'transparent');
+                $('.form').css('background-color', '');
+
+                if(window.innerWidth>500) $('.form').css('background-color', '#292a2d');
+                $(window).resize(function(){
+                    if(window.innerWidth>500) $('.form').css('background-color', '#292a2d');
+                    else $('.form').css('background-color', '');
+                });
                 $('.color').css('background-color', '#292a2d');
                 $('.topcmps').css('background-color', '#292a2d');
                 $('.underline').css('background', 'white');
