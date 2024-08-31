@@ -272,7 +272,7 @@ function desktop()
                 'background': 'linear-gradient(transparent, rgba(20,42,56,0.3), rgba(28,89,129,0.6))'
             })
             $('.form').css({
-                'background': 'transparent'
+                'background': '#292a2d'
             })
             $('.design').css({
                 'background': 'rgb(49,51,56)'
