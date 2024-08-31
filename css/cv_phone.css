@@ -765,6 +765,7 @@ footer>div:nth-child(2)>img{
 .bigImg>img{
     width: 100%;
     height: max-content;
+    border-radius: 0;
 }
 
 .design{
